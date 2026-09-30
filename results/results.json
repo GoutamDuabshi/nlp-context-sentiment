@@ -1,0 +1,200 @@
+{
+  "cv": [
+    {
+      "dataset": "Movie Reviews (formal)",
+      "model": "A. VADER lexicon",
+      "acc": 0.635,
+      "acc_std": 0.013133925536563687,
+      "f1": 0.6209572600940959,
+      "f1_std": 0.0159153125684604
+    },
+    {
+      "dataset": "Movie Reviews (formal)",
+      "model": "B. TF-IDF unigram",
+      "acc": 0.877,
+      "acc_std": 0.01713184169901181,
+      "f1": 0.8769648650006596,
+      "f1_std": 0.01715441043530012
+    },
+    {
+      "dataset": "Movie Reviews (formal)",
+      "model": "C. + bigrams",
+      "acc": 0.8744999999999999,
+      "acc_std": 0.009137833441248508,
+      "f1": 0.8744372121459068,
+      "f1_std": 0.009117966809068385
+    },
+    {
+      "dataset": "Movie Reviews (formal)",
+      "model": "D. + negation",
+      "acc": 0.8734999999999999,
+      "acc_std": 0.013285330255586396,
+      "f1": 0.8734333788157409,
+      "f1_std": 0.013302689214663252
+    },
+    {
+      "dataset": "Movie Reviews (formal)",
+      "model": "E. Word2Vec (trained)",
+      "acc": 0.751,
+      "acc_std": 0.012708265027138822,
+      "f1": 0.7509099083900856,
+      "f1_std": 0.012658905559637142
+    },
+    {
+      "dataset": "Tweets (informal)",
+      "model": "A. VADER lexicon",
+      "acc": 0.6221,
+      "acc_std": 0.00947311986623202,
+      "f1": 0.5889757591797748,
+      "f1_std": 0.011155382465199749
+    },
+    {
+      "dataset": "Tweets (informal)",
+      "model": "B. TF-IDF unigram",
+      "acc": 0.7956000000000001,
+      "acc_std": 0.004586937976471884,
+      "f1": 0.7955473435248194,
+      "f1_std": 0.00458371404039894
+    },
+    {
+      "dataset": "Tweets (informal)",
+      "model": "C. + bigrams",
+      "acc": 0.7978000000000001,
+      "acc_std": 0.004057092555020186,
+      "f1": 0.7977639498617599,
+      "f1_std": 0.004081805161836653
+    },
+    {
+      "dataset": "Tweets (informal)",
+      "model": "D. + negation",
+      "acc": 0.7982000000000001,
+      "acc_std": 0.0015684387141358235,
+      "f1": 0.7981532828174075,
+      "f1_std": 0.0015974117706555337
+    },
+    {
+      "dataset": "Tweets (informal)",
+      "model": "E. Word2Vec (trained)",
+      "acc": 0.746,
+      "acc_std": 0.008994442728707542,
+      "f1": 0.7459821658611812,
+      "f1_std": 0.0089984770895178
+    }
+  ],
+  "confusion": {
+    "Movie Reviews (formal)": {
+      "B. TF-IDF unigram": [
+        [
+          224,
+          26
+        ],
+        [
+          21,
+          229
+        ]
+      ],
+      "D. + negation": [
+        [
+          222,
+          28
+        ],
+        [
+          23,
+          227
+        ]
+      ]
+    },
+    "Tweets (informal)": {
+      "B. TF-IDF unigram": [
+        [
+          1003,
+          247
+        ],
+        [
+          266,
+          984
+        ]
+      ],
+      "D. + negation": [
+        [
+          1004,
+          246
+        ],
+        [
+          260,
+          990
+        ]
+      ]
+    }
+  },
+  "error_stats": [
+    {
+      "dataset": "Movie Reviews (formal)",
+      "n_test": 500,
+      "n_fixed": 12,
+      "n_fixed_with_negation": 12,
+      "pct_fixed_with_negation": 100.0
+    },
+    {
+      "dataset": "Tweets (informal)",
+      "n_test": 2500,
+      "n_fixed": 116,
+      "n_fixed_with_negation": 20,
+      "pct_fixed_with_negation": 17.24137931034483
+    }
+  ],
+  "examples": {
+    "Movie Reviews (formal)": [
+      {
+        "text": "the scene at the end of 1989's `dead poets society , ' when robin williams' english students stand up on their desk and say , `captain , my captain , ",
+        "true": 0
+      },
+      {
+        "text": "i have to say it .  tim burton's retelling of planet of the apes is more fun than a barrel of monkeys .  ok , that's off my chest .  no more monkey pu",
+        "true": 1
+      },
+      {
+        "text": "the swooping shots across darkened rooftops suggest a very tim burton movie , but , alas , no caped crusader descends to save * this * film .  instead",
+        "true": 0
+      },
+      {
+        "text": " \" crazy/beautiful \" suffers from the damned-if-you-do , damned-if-you-don't syndrome .  after a spate of flighty , cookie-cutter teen films , the rom",
+        "true": 1
+      },
+      {
+        "text": "it's ironic that the best films in cinema history are invariably the original director's cut of the film .  films such as aliens , the abyss , the wil",
+        "true": 1
+      },
+      {
+        "text": "first , i am not a big fan of the x-files tv series .  i have nothing against it particularly , i just don't happen to watch it .  having said that , ",
+        "true": 1
+      }
+    ],
+    "Tweets (informal)": [
+      {
+        "text": "Oh that's not good Linda Have you tried clicking on the option to change the pin?",
+        "true": 0
+      },
+      {
+        "text": "Two comes after one. Lessons once you learn make you realize how tough life can get. But nothing lasts forever. Not a thing. Ever. Lasts!",
+        "true": 1
+      },
+      {
+        "text": "Oh no Hope you are having a lovely time though! -Danni",
+        "true": 0
+      },
+      {
+        "text": "No one thank that they have me bc of 1D! I H A T E M E. Kbye",
+        "true": 0
+      },
+      {
+        "text": "you bet! Planning a secret baby shower for Chloe! I can say it here because she barely knows what a computer is !",
+        "true": 1
+      },
+      {
+        "text": "Love it! 13 photos that explain why Ukraine is not Russia",
+        "true": 1
+      }
+    ]
+  }
+}
